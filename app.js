@@ -36,12 +36,12 @@ app.post("/",function(req,res){
             }
         ]
     }
-
+    const authenCode = "omkar"+API_KEY;
     const jsonData = JSON.stringify(edata);
     const url = "https://us21.api.mailchimp.com/3.0/lists/f3887f19d1";
     const options = {
         method: "POST",
-        auth: "omkar:a7fbf8357e0620d1708f38d3ee851023-us21"
+        auth: authenCode
     }
  
     const request = https.request(url,options,function(response){
@@ -83,6 +83,8 @@ app.listen(process.env.PORT || 3000,function(){
 
 //API
 //a7fbf8357e0620d1708f38d3ee851023-us21
+//new API
+//bb9b444085b9b3ed2c7218ad333157f4-us21
 
 //Audience ID
 //f3887f19d1.
